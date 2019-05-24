@@ -14,6 +14,7 @@ Solution of third task of home assignment from BSA.
 
 ## Usage
 This is an API server, so the endpoints are:
+
 - GET `users/` to receive the list of all users from file;
 - GET `users/:id` to receive info about one user with specified `id`;
 - POST `users/` to add new user (adds new user to the `storage/users.json` file);
