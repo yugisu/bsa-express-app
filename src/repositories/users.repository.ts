@@ -127,3 +127,40 @@ export const addUser = (
     }
   });
 };
+
+export const editUser = (
+  id: number,
+  newUser: UserNoId | User,
+  callback: GetUsersCallback<User>
+) => {
+  console.log(`Editing user with id ${id}, with changes: ${newUser}`);
+
+  const defaultUser: User = {
+    id: id,
+    name: 'un Combattant',
+    health: 50,
+    attack: 3,
+    defense: 1,
+    source:
+      'https://media1.tenor.com/images/0faba4edb10f7c0983d5720e8cb7f90d/tenor.gif?itemid=11572951',
+  };
+
+  callback({
+    status: 'ok',
+    response: { ...defaultUser, ...newUser },
+  });
+};
+
+export const deleteUser = (
+  id: number,
+  callback: GetUsersCallback<{ message: string }>
+) => {
+  console.log(`Deleting user with id ${id}`);
+
+  callback({
+    status: 'ok',
+    response: {
+      message: 'deleted!',
+    },
+  });
+};
