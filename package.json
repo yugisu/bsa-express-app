@@ -1,6 +1,6 @@
 {
   "name": "bsa19-express",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "concurrently --kill-others \"tsc --w\" \"nodemon build/index.js \"",
@@ -23,6 +23,6 @@
     "typescript": "^3.4.5"
   },
   "nodemonConfig": {
-    "ext": "js" 
+    "ext": "js"
   }
 }
